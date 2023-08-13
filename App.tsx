@@ -28,6 +28,12 @@ import {
 
 import NavBar from "./src/components/NavBar.tsx"
 
+const App = () => {
+    return (
+        <NavBar>
+        </NavBar>
+    );
+};
 
-// export default App;
-export default NavBar;
+export default App;
+// export default NavBar;

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   StyleSheet,
@@ -9,14 +10,9 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
 
-const NavBar = () => {
+const MainInfo = () => {
   return (
     <View style={styles.container}>
-
-      <View style={styles.icons_container}>
-            <Icon name="chevron-left" size={14} color="#fff" />
-        <Icon name="bars" size={15} color="#fff" />
-      </View>
       <Text style={styles.text}>Gestiona salud</Text>
     </View>
   );
@@ -47,4 +43,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default NavBar;
+export default MainInfo;
