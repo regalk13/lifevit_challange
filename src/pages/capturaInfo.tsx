@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React, {useState} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -27,10 +20,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import NavBar from "./src/components/NavBar.tsx"
-import MainInfo from "./src/components/MainInfo.tsx"
-import ListItem from "./src/components/listItem.tsx"
-import ButtonAction from "./src/components/ButtonAction.tsx"
+import NavBar from "../components/NavBar.tsx"
+import MainInfo from "../components/MainInfo.tsx"
+import ListItem from "../components/listItem.tsx"
+import ButtonAction from "../components/ButtonAction.tsx"
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
@@ -43,7 +36,7 @@ const seperatorStyles: viewStyle = {
 
 const Seperator = () => <View style={seperatorStyles} />
 
-const App = () => {
+const CapturaInfo = () => {
     return (
         <View>
             <NavBar>
@@ -73,4 +66,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default CapturaInfo;
