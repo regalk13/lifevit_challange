@@ -18,9 +18,11 @@ const NavBar = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-
       <View style={styles.icons_container}>
+            <Pressable
+            onPress={() => navigation.goBack()}>
             <Icon name="chevron-left" size={16} color="#fff" />
+            </Pressable>
             <Pressable
             onPress={() => navigation.toggleDrawer()}>
 

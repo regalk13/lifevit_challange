@@ -21,9 +21,11 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import NavBar from "../components/NavBar.tsx"
-import MainInfo from "../components/MainInfo.tsx"
-import ListItem from "../components/listItem.tsx"
 import ButtonAction from "../components/ButtonAction.tsx"
+import MainInfo from "../components/MainInfo.tsx"
+import DeviceInfo from "../components/deviceInfo.tsx"
+import DeviceList from "../components/deviceList.tsx"
+import PacienteInfo from "../components/pacienteInfo.tsx"
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
@@ -36,7 +38,7 @@ const seperatorStyles: viewStyle = {
 
 const Seperator = () => <View style={seperatorStyles} />
 
-const EnvioInfo = (props) => {
+const CapturaInfo = (props) => {
     return (
         <View>
             <NavBar>
@@ -44,26 +46,28 @@ const EnvioInfo = (props) => {
 
             <MainInfo>
             </MainInfo>
+            
 
-            <ListItem main={require( "../iconos/ICONOS-12.png")} name="Tensiometro" page="Captura Tensiometro">
-            </ListItem>
-
-            <Seperator />
-            <ListItem main={require( "../iconos/ICONOS-14.png")} name="Termometro" page="Captura Termometro">
-            </ListItem>
+            <DeviceInfo>
+            </DeviceInfo>
             
             <Seperator />
-            <ListItem main={require( "../iconos/ICONOS-16.png")} name="Oximetro" page="Captura Oximetro">
-            </ListItem>
+ 
+            <PacienteInfo>
+            </PacienteInfo>
+                       
+            <DeviceList main={require( "../iconos/ICONOS-14.png")} name="TEMP" value="36.6" bg="#dbecfa">
+            </DeviceList>
             
-            <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 60, marginTop: 20}}>
-                <ButtonAction name="Enviar" color="#0586e1" >
+            
+            <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 30, marginTop: 20, alignItems: "center"}}>
+                <Icon name="chevron-left" size={16} color="#2c5274" />
+                <ButtonAction name="Capturar / Detener" color="#0586e1" >
                 </ButtonAction>
-                <ButtonAction name="Atras" color="#acb0b3" >
-                </ButtonAction>
+                <Icon name="chevron-right" size={16} color="#2c5274" />
             </View>
        </View>
     );
 };
 
-export default EnvioInfo;
+export default CapturaInfo;

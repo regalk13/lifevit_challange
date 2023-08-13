@@ -6,10 +6,12 @@ import {
   Button,
   View,
   Image,
+  Pressable,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
+import { useNavigation } from '@react-navigation/native';
 
 type ListProps = {
     main: string,
@@ -17,11 +19,18 @@ type ListProps = {
 };
 
 const ListItem = (props: ListProps) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       
     <View style={styles.container2}>
-      <Image source={props.main} style={{width: 100, height: 100}} /> 
+      
+        <Pressable
+            onPress={() => navigation.navigate(props.page)}>
+
+            <Image source={props.main} style={{width: 100, height: 100}} /> 
+        </Pressable>
+
       <Text style={{textAlign: "center", lineHeight: 15, position: "absolute", top: "85%", left: 0, right: 0, marginLeft: "auto", marginRight: "auto",}}>{props.name}</Text>
     </View> 
     <View style={{display: "flex", flexDirection: "row"}}>

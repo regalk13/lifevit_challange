@@ -30,7 +30,11 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
 import EnvioInfo from "./src/pages/envioInfo.tsx";
-import CapturaInfo from "./src/pages/capturaInfo.tsx";
+
+import CapturaTensio from "./src/pages/capturaTensio.tsx";
+import CapturaOxi from "./src/pages/capturaOxi.tsx";
+import CapturaTermo from "./src/pages/capturaTermo.tsx";
+
 
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
@@ -50,7 +54,9 @@ const App = () => {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Envia Información" screenOptions={{drawerPosition:'right',headerShown:false }}>
         <Drawer.Screen  name="Envia Información" component={EnvioInfo} options={{ headerShown: false }}/>
-        <Drawer.Screen  name="Captura Información" component={CapturaInfo} options={{ headerShown: false }}/>
+        <Drawer.Screen  name="Captura Tensiometro" component={CapturaTensio} options={{ headerShown: false }}/>
+        <Drawer.Screen  name="Captura Termometro" component={CapturaTermo} options={{ headerShown: false }}/>
+        <Drawer.Screen  name="Captura Oximetro" component={CapturaOxi} options={{ headerShown: false }}/>
       </Drawer.Navigator>
     </NavigationContainer>
     );
