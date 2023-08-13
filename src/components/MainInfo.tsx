@@ -20,8 +20,8 @@ const MainInfo = () => {
       <Text style={{textAlign: "center", lineHeight: 15, position: "absolute", top: "85%", left: 0, right: 0, marginLeft: "auto", marginRight: "auto",}}>Ivan Baez Logout</Text>
     </View>
     <View style={{flexDirection:'column', flexWrap:'wrap', marginTop: 5}}>
-        <Text style={{color: "#2f4f6b", fontWeight: "bold", display: "block", fontSize: 18,}}>Finalización</Text> 
-        <Text style={{lineHeight: 18, fontSize: 18}}><Text style={{color: "#2f4f6b", fontWeight: "bold", display: "block", fontSize: 18,}}>y envio</Text> de</Text>
+        <Text style={{color: "#2f4f6b", fontWeight: "bold", fontSize: 18,}}>Finalización</Text> 
+        <Text style={{lineHeight: 18, fontSize: 18}}><Text style={{color: "#2f4f6b", fontWeight: "bold", fontSize: 18,}}>y envio</Text> de</Text>
         <Text style={{lineHeight: 18, fontSize: 18}}>Información</Text> 
     </View>
     </View>

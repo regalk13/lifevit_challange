@@ -5,18 +5,29 @@ import {
   Button,
   View,
   Image,
+  Pressable,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
 
+import { useNavigation } from '@react-navigation/native';
+
 const NavBar = () => {
+
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
 
       <View style={styles.icons_container}>
             <Icon name="chevron-left" size={16} color="#fff" />
+            <Pressable
+            onPress={() => navigation.toggleDrawer()}>
+
         <Icon name="bars" size={18} color="#fff" />
+            </Pressable>
+ 
+
       </View>
 
       <View style={styles.title_container}>

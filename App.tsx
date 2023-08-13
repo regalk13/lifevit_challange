@@ -26,11 +26,12 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 
-import NavBar from "./src/components/NavBar.tsx"
-import MainInfo from "./src/components/MainInfo.tsx"
-import ListItem from "./src/components/listItem.tsx"
-import ButtonAction from "./src/components/ButtonAction.tsx"
+import EnvioInfo from "./src/pages/envioInfo.tsx";
+import CapturaInfo from "./src/pages/capturaInfo.tsx";
+
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
@@ -43,33 +44,15 @@ const seperatorStyles: viewStyle = {
 
 const Seperator = () => <View style={seperatorStyles} />
 
+const Drawer = createDrawerNavigator();
 const App = () => {
     return (
-        <View>
-            <NavBar>
-            </NavBar>
-
-            <MainInfo>
-            </MainInfo>
-
-            <ListItem main={require( "./src/iconos/ICONOS-12.png")} name="Tensiometro">
-            </ListItem>
-
-            <Seperator />
-            <ListItem main={require( "./src/iconos/ICONOS-13.png")} name="Termometro">
-            </ListItem>
-            
-            <Seperator />
-            <ListItem main={require( "./src/iconos/ICONOS-15.png")} name="Oximetro">
-            </ListItem>
-            
-            <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 60, marginTop: 20}}>
-                <ButtonAction name="Enviar" color="#0586e1">
-                </ButtonAction>
-                <ButtonAction name="Atras" color="#acb0b3">
-                </ButtonAction>
-            </View>
-       </View>
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Envia Información" screenOptions={{drawerPosition:'right',headerShown:false }}>
+        <Drawer.Screen  name="Envia Información" component={EnvioInfo} options={{ headerShown: false }}/>
+        <Drawer.Screen  name="Captura Información" component={CapturaInfo} options={{ headerShown: false }}/>
+      </Drawer.Navigator>
+    </NavigationContainer>
     );
 };
 

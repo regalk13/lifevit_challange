@@ -36,7 +36,7 @@ const seperatorStyles: viewStyle = {
 
 const Seperator = () => <View style={seperatorStyles} />
 
-const CapturaInfo = (props) => {
+const EnvioInfo = (props) => {
     return (
         <View>
             <NavBar>
@@ -49,13 +49,21 @@ const CapturaInfo = (props) => {
             </ListItem>
 
             <Seperator />
+            <ListItem main={require( "../iconos/ICONOS-13.png")} name="Termometro">
+            </ListItem>
+            
+            <Seperator />
+            <ListItem main={require( "../iconos/ICONOS-15.png")} name="Oximetro">
+            </ListItem>
             
             <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 60, marginTop: 20}}>
                 <ButtonAction name="Enviar" color="#0586e1" >
+                </ButtonAction>
+                <ButtonAction name="Atras" color="#acb0b3" >
                 </ButtonAction>
             </View>
        </View>
     );
 };
 
-export default CapturaInfo;
+export default EnvioInfo;

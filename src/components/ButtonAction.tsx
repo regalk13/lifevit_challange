@@ -14,7 +14,8 @@ import Icon from 'react-native-vector-icons/FontAwesome6';
 const ButtonAction = (props) =>{
 
     return (
-    <Pressable style=
+    <Pressable
+        style=
         {({pressed}) => [
           {
             backgroundColor: props.color,
