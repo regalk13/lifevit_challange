@@ -4,6 +4,7 @@ import {
   Text,
   Button,
   View,
+  Image,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
@@ -14,10 +15,18 @@ const NavBar = () => {
     <View style={styles.container}>
 
       <View style={styles.icons_container}>
-            <Icon name="chevron-left" size={14} color="#fff" />
-        <Icon name="bars" size={15} color="#fff" />
+            <Icon name="chevron-left" size={16} color="#fff" />
+        <Icon name="bars" size={18} color="#fff" />
       </View>
-      <Text style={styles.text}>Gestiona salud</Text>
+
+      <View style={styles.title_container}>
+        <Image source={require('../iconos/logo.png')} style={{width: 120, height: 120}} /> 
+        
+        <View style={{display: "flex"}}>
+            <Text style={styles.text}>GESTIONA</Text>
+            <Text style={{fontSize: 20,color: "#fff", lineHeight: 20}}>SALUD</Text>
+        </View>
+      </View>
     </View>
   );
 };
@@ -26,7 +35,7 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     backgroundColor: '#0b73c2',
-    minHeight: 180,
+    maxHeight: 190,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
@@ -35,13 +44,20 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 20,
+    padding: 30,
+    paddingBottom: 0,
   },
 
+  title_container: {
+    display: "flex",
+    flexDirection: "row",
+    padding: 20,
+  },
   text: {
-    marginTop: 30,
+    marginTop: 20,
+    fontWeight: "bold",
     textAlign: "center",
-    fontSize: 30,
+    fontSize: 33,
     color: "#fff",  
   }
 });

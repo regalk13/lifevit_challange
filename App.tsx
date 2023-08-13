@@ -27,11 +27,27 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import NavBar from "./src/components/NavBar.tsx"
+import MainInfo from "./src/components/MainInfo.tsx"
+import ListItem from "./src/components/listItem.tsx"
+
 
 const App = () => {
     return (
-        <NavBar>
-        </NavBar>
+        <View>
+            <NavBar>
+            </NavBar>
+
+            <MainInfo>
+            </MainInfo>
+            <ListItem main={require( "./src/iconos/ICONOS-12.png")} name="Tensiometro">
+            </ListItem>
+
+            <ListItem main={require( "./src/iconos/ICONOS-13.png")} name="Termometro">
+            </ListItem>
+            
+            <ListItem main={require( "./src/iconos/ICONOS-15.png")} name="Oximetro">
+            </ListItem>
+        </View>
     );
 };
 
