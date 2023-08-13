@@ -21,9 +21,11 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import NavBar from "../components/NavBar.tsx"
-import MainInfo from "../components/MainInfo.tsx"
-import ListItem from "../components/listItem.tsx"
 import ButtonAction from "../components/ButtonAction.tsx"
+import MainInfo from "../components/MainInfo.tsx"
+import DeviceInfo from "../components/deviceInfo.tsx"
+import DeviceList from "../components/deviceList.tsx"
+import PacienteInfo from "../components/pacienteInfo.tsx"
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
@@ -44,15 +46,30 @@ const CapturaInfo = (props) => {
 
             <MainInfo>
             </MainInfo>
-
-            <ListItem main={require( "../iconos/ICONOS-12.png")} name="Tensiometro">
-            </ListItem>
-
-            <Seperator />
             
-            <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 60, marginTop: 20}}>
-                <ButtonAction name="Enviar" color="#0586e1" >
+
+            <DeviceInfo>
+            </DeviceInfo>
+            
+            <Seperator />
+ 
+            <PacienteInfo>
+            </PacienteInfo>
+                       
+            <DeviceList main={require( "../iconos/ICONOS-24.png")} name="SYS" value="124" bg="#dbecfa">
+            </DeviceList>
+            
+            <DeviceList main={require( "../iconos/ICONOS-25.png")} name="DIA" value="69" bg="#e9f3fd">
+            </DeviceList>
+            
+            <DeviceList main={require( "../iconos/ICONOS-26.png")} name="PULSO" value="54" bg="#f0f9ff">
+            </DeviceList>
+
+            <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 30, marginTop: 20, alignItems: "center"}}>
+                <Icon name="chevron-left" size={16} color="#2c5274" />
+                <ButtonAction name="Capturar / Detener" color="#0586e1" >
                 </ButtonAction>
+                <Icon name="chevron-right" size={16} color="#2c5274" />
             </View>
        </View>
     );
