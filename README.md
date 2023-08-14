@@ -11,7 +11,7 @@ La aplicación puede ser facilmente desplegada con ayuda de npx react-native, pa
 
 ### Desplegala en vivo
 
-Primero instala todas las dependencias necesarias: 
+Primero instala todas las dependencias necesarias (usa [INSTALL.MD](https://github.com/regalk13/reactNative_challenge/blob/main/INSTALL.md) para mas soporte): 
 ```
 npm install
 ```
