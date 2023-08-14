@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -29,6 +29,7 @@ import PacienteInfo from "../components/pacienteInfo.tsx"
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
+
 const seperatorStyles: viewStyle = {
     height: 1,
     marginLeft: 20,
@@ -38,8 +39,22 @@ const seperatorStyles: viewStyle = {
 
 const Seperator = () => <View style={seperatorStyles} />
 
+
+
 const CapturaInfo = (props) => {
-    return (
+       const customData = require('../Datasensores/tensio.json');
+        let sys = customData["data"]["high_pressure"];
+        let dia = customData["data"]["low_pressure"];
+        let pulso = customData["data"]["heart_rate"];
+        
+        const data = {
+            sys: sys,
+            dia: dia,
+            pulso: pulso,
+        };
+       
+
+       return (
         <View>
             <NavBar>
             </NavBar>
@@ -55,19 +70,14 @@ const CapturaInfo = (props) => {
  
             <PacienteInfo>
             </PacienteInfo>
-                       
-            <DeviceList main={require( "../iconos/ICONOS-24.png")} name="SYS" value="124" bg="#dbecfa">
-            </DeviceList>
+            <DeviceList main={require('../iconos/ICONOS-24.png')} name="SYS" value={data ? data.sys : 'Default SYS'} bg="#dbecfa" />
+      <DeviceList main={require('../iconos/ICONOS-25.png')} name="DIA" value={data ? data.dia : 'Default DIA'} bg="#e9f3fd" />
+      <DeviceList main={require('../iconos/ICONOS-26.png')} name="PULSO" value={data ? data.pulso : 'Default PULSO'} bg="#f0f9ff" />
             
-            <DeviceList main={require( "../iconos/ICONOS-25.png")} name="DIA" value="69" bg="#e9f3fd">
-            </DeviceList>
-            
-            <DeviceList main={require( "../iconos/ICONOS-26.png")} name="PULSO" value="54" bg="#f0f9ff">
-            </DeviceList>
 
             <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 30, marginTop: 20, alignItems: "center"}}>
                 <Icon name="chevron-left" size={16} color="#2c5274" />
-                <ButtonAction name="Capturar / Detener" color="#0586e1" >
+                <ButtonAction name="Capturar / Detener" color="#0586e1" func={handlePress} >
                 </ButtonAction>
                 <Icon name="chevron-right" size={16} color="#2c5274" />
             </View>

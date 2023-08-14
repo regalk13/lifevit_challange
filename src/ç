@@ -27,6 +27,7 @@ import ButtonAction from "../components/ButtonAction.tsx"
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
+import { useNavigation } from '@react-navigation/native';
 
 const seperatorStyles: viewStyle = {
     height: 1,
@@ -37,13 +38,11 @@ const seperatorStyles: viewStyle = {
 
 const Seperator = () => <View style={seperatorStyles} />
 
+const navigation = useNavigation();
+const goLogin = () => navigation.navigate("login");
+
+
 const EnvioInfo = (props) => {
-
-    handlePress = () => {
-        console.log("Enviando")
-    }
-
-
     return (
         <View>
             <NavBar>
@@ -64,7 +63,7 @@ const EnvioInfo = (props) => {
             </ListItem>
             
             <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 60, marginTop: 20}}>
-                <ButtonAction name="Enviar" color="#0586e1" func={handlePress}>
+                <ButtonAction name="Enviar" color="#0586e1" >
                 </ButtonAction>
                 <ButtonAction name="Atras" color="#acb0b3" >
                 </ButtonAction>

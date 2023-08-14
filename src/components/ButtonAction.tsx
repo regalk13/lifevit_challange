@@ -10,11 +10,11 @@ import {
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
-
 const ButtonAction = (props) =>{
 
     return (
     <Pressable
+        onPress={props.func}
         style=
         {({pressed}) => [
           {

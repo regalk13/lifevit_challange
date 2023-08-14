@@ -39,6 +39,12 @@ const seperatorStyles: viewStyle = {
 const Seperator = () => <View style={seperatorStyles} />
 
 const CapturaInfo = (props) => {
+        const customData = require('../Datasensores/temp.json');
+        let temp = customData["data"]["temperature"];
+        
+        const data = {
+            temp: temp,
+        };
     return (
         <View>
             <NavBar>
@@ -56,7 +62,7 @@ const CapturaInfo = (props) => {
             <PacienteInfo>
             </PacienteInfo>
                        
-            <DeviceList main={require( "../iconos/ICONOS-14.png")} name="TEMP" value="36.6" bg="#dbecfa">
+            <DeviceList main={require( "../iconos/ICONOS-14.png")} name="TEMP" value={data.temp} bg="#dbecfa">
             </DeviceList>
             
             

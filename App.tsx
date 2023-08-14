@@ -34,7 +34,7 @@ import EnvioInfo from "./src/pages/envioInfo.tsx";
 import CapturaTensio from "./src/pages/capturaTensio.tsx";
 import CapturaOxi from "./src/pages/capturaOxi.tsx";
 import CapturaTermo from "./src/pages/capturaTermo.tsx";
-
+import Home from "./src/pages/home.tsx";
 
 
 import Icon from 'react-native-vector-icons/FontAwesome6';

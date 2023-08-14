@@ -39,6 +39,13 @@ const seperatorStyles: viewStyle = {
 const Seperator = () => <View style={seperatorStyles} />
 
 const CapturaInfo = (props) => {
+        const customData = require('../Datasensores/pulsi.json');
+        let oxy = customData["data"]["blood_oxygen"];
+        
+        const data = {
+            oxy: oxy,
+        };
+ 
     return (
         <View>
             <NavBar>
@@ -56,7 +63,7 @@ const CapturaInfo = (props) => {
             <PacienteInfo>
             </PacienteInfo>
                        
-            <DeviceList main={require( "../iconos/ICONOS-16.png")} name="OXI" value="80.00" bg="#dbecfa">
+            <DeviceList main={require( "../iconos/ICONOS-16.png")} name="OXI" value={data.oxy} bg="#dbecfa">
             </DeviceList>
                 <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 30, marginTop: 20, alignItems: "center"}}>
                 <Icon name="chevron-left" size={16} color="#2c5274" />
