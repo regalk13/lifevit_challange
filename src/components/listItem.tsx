@@ -29,6 +29,7 @@ const ListItem = (props: ListProps) => {
             right: 0,
             marginLeft: 'auto',
             marginRight: 'auto',
+            color: "#333",
           }}>
           {props.name}
         </Text>

@@ -14,7 +14,7 @@ const PacienteInfo = props => {
       </View>
       <View style={{display: 'flex'}}>
         <Text style={styles.text}>Cristian</Text>
-        <Text>29 xxx/81kg/1,84 mts</Text>
+        <Text style={{color: "#333"}}>29 xxx/81kg/1,84 mts</Text>
       </View>
     </View>
   );
