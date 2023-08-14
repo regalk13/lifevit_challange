@@ -9,7 +9,7 @@ import {
   Button,
   useColorScheme,
   View,
-  Pressable
+  Pressable,
 } from 'react-native';
 
 import {
@@ -20,69 +20,84 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import NavBar from "../components/NavBar.tsx"
-import ButtonAction from "../components/ButtonAction.tsx"
-import MainInfo from "../components/MainInfo.tsx"
-import DeviceInfo from "../components/deviceInfo.tsx"
-import DeviceList from "../components/deviceList.tsx"
-import PacienteInfo from "../components/pacienteInfo.tsx"
+import NavBar from '../components/NavBar.tsx';
+import ButtonAction from '../components/ButtonAction.tsx';
+import MainInfo from '../components/MainInfo.tsx';
+import DeviceInfo from '../components/deviceInfo.tsx';
+import DeviceList from '../components/deviceList.tsx';
+import PacienteInfo from '../components/pacienteInfo.tsx';
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
-
 const seperatorStyles: viewStyle = {
-    height: 1,
-    marginLeft: 20,
-    marginRight: 20,
-    backgroundColor: '#ddd',
+  height: 1,
+  marginLeft: 20,
+  marginRight: 20,
+  backgroundColor: '#ddd',
 };
 
-const Seperator = () => <View style={seperatorStyles} />
+const Seperator = () => <View style={seperatorStyles} />;
 
+const CapturaInfo = props => {
+  const customData = require('../Datasensores/tensio.json');
+  let sys = customData['data']['high_pressure'];
+  let dia = customData['data']['low_pressure'];
+  let pulso = customData['data']['heart_rate'];
 
+  const data = {
+    sys: sys,
+    dia: dia,
+    pulso: pulso,
+  };
 
-const CapturaInfo = (props) => {
-       const customData = require('../Datasensores/tensio.json');
-        let sys = customData["data"]["high_pressure"];
-        let dia = customData["data"]["low_pressure"];
-        let pulso = customData["data"]["heart_rate"];
-        
-        const data = {
-            sys: sys,
-            dia: dia,
-            pulso: pulso,
-        };
-       
+  return (
+    <View>
+      <NavBar></NavBar>
 
-       return (
-        <View>
-            <NavBar>
-            </NavBar>
+      <MainInfo></MainInfo>
 
-            <MainInfo>
-            </MainInfo>
-            
+      <DeviceInfo></DeviceInfo>
 
-            <DeviceInfo>
-            </DeviceInfo>
-            
-            <Seperator />
- 
-            <PacienteInfo>
-            </PacienteInfo>
-            <DeviceList main={require('../iconos/ICONOS-24.png')} name="SYS" value={data ? data.sys : 'Default SYS'} bg="#dbecfa" />
-      <DeviceList main={require('../iconos/ICONOS-25.png')} name="DIA" value={data ? data.dia : 'Default DIA'} bg="#e9f3fd" />
-      <DeviceList main={require('../iconos/ICONOS-26.png')} name="PULSO" value={data ? data.pulso : 'Default PULSO'} bg="#f0f9ff" />
-            
+      <Seperator />
 
-            <View style={{display: "flex", flexDirection: "row", justifyContent: "center", gap: 30, marginTop: 20, alignItems: "center"}}>
-                <Icon name="chevron-left" size={16} color="#2c5274" />
-                <ButtonAction name="Capturar / Detener" color="#0586e1" func={handlePress} >
-                </ButtonAction>
-                <Icon name="chevron-right" size={16} color="#2c5274" />
-            </View>
-       </View>
-    );
+      <PacienteInfo></PacienteInfo>
+      <DeviceList
+        main={require('../iconos/ICONOS-24.png')}
+        name="SYS"
+        value={data ? data.sys : 'Default SYS'}
+        bg="#dbecfa"
+      />
+      <DeviceList
+        main={require('../iconos/ICONOS-25.png')}
+        name="DIA"
+        value={data ? data.dia : 'Default DIA'}
+        bg="#e9f3fd"
+      />
+      <DeviceList
+        main={require('../iconos/ICONOS-26.png')}
+        name="PULSO"
+        value={data ? data.pulso : 'Default PULSO'}
+        bg="#f0f9ff"
+      />
+
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          gap: 30,
+          marginTop: 20,
+          alignItems: 'center',
+        }}>
+        <Icon name="chevron-left" size={16} color="#2c5274" />
+        <ButtonAction
+          name="Capturar / Detener"
+          color="#0586e1"
+          func={handlePress}></ButtonAction>
+        <Icon name="chevron-right" size={16} color="#2c5274" />
+      </View>
+    </View>
+  );
 };
 
 export default CapturaInfo;

@@ -1,17 +1,17 @@
 {
-    "secret": "6fd2d91ab75d50e4beeebcbb0491a2a2", 
-    "type": "set",
-    "target": "sensor",
-    "mac adress": "6d:d3:2a:4t:6a",
-    "business_id": 1000,
-    "user_id": 5,
-    "patient_id": 11,
-    "device_id": 111,
-    "latitude": 7.1165783333333,
-    "longitud": -73.112495,
-    "device_time": "2023-08-5 18:16:04",
-    "Server Time": "2023-08-5 18:16:06",
-    "data": {        
-        "blood_oxygen": 80.00       
-    }
+  "secret": "6fd2d91ab75d50e4beeebcbb0491a2a2",
+  "type": "set",
+  "target": "sensor",
+  "mac adress": "6d:d3:2a:4t:6a",
+  "business_id": 1000,
+  "user_id": 5,
+  "patient_id": 11,
+  "device_id": 111,
+  "latitude": 7.1165783333333,
+  "longitud": -73.112495,
+  "device_time": "2023-08-5 18:16:04",
+  "Server Time": "2023-08-5 18:16:06",
+  "data": {
+    "blood_oxygen": 80.0
+  }
 }
