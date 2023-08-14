@@ -21,7 +21,7 @@ const MainInfo = () => {
             right: 0,
             marginLeft: 'auto',
             marginRight: 'auto',
-            color: "#333",
+            color: '#333',
           }}>
           Ivan Baez Logout
         </Text>
@@ -30,18 +30,21 @@ const MainInfo = () => {
         <Text style={{color: '#2f4f6b', fontWeight: 'bold', fontSize: 18}}>
           Finalización
         </Text>
-        <Text style={{lineHeight: 18, fontSize: 18, 
+        <Text
+          style={{
+            lineHeight: 18,
+            fontSize: 18,
 
-            color: "#333",
-        }}>
+            color: '#333',
+          }}>
           <Text style={{color: '#2f4f6b', fontWeight: 'bold', fontSize: 18}}>
             y envio
           </Text>{' '}
           de
         </Text>
-        <Text style={{lineHeight: 18, fontSize: 18,
-            color: "#333",
-        }}>Información</Text>
+        <Text style={{lineHeight: 18, fontSize: 18, color: '#333'}}>
+          Información
+        </Text>
       </View>
     </View>
   );

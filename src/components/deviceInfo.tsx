@@ -12,14 +12,14 @@ const DeviceInfo = props => {
           source={require('../iconos/ICONOS-37.png')}
           style={{width: 70, height: 70}}
         />
-        <Text style={{color: "#333"}}>70%</Text>
+        <Text style={{color: '#333'}}>70%</Text>
       </View>
       <View style={styles.container}>
         <Image
           source={require('../iconos/ICONOS-38.png')}
           style={{width: 70, height: 70}}
         />
-        <Text style={{color: "#333"}}>
+        <Text style={{color: '#333'}}>
           {dateActual.getDate() +
             '/' +
             (dateActual.getMonth() + 1) +
@@ -32,7 +32,7 @@ const DeviceInfo = props => {
           source={require('../iconos/ICONOS-39.png')}
           style={{width: 70, height: 70}}
         />
-        <Text style={{color: "#333"}}>14:10</Text>
+        <Text style={{color: '#333'}}>14:10</Text>
       </View>
     </View>
   );

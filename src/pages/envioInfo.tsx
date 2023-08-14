@@ -28,7 +28,7 @@ import ButtonAction from '../components/ButtonAction.tsx';
 
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
-import {SECRET} from "@env"
+import {SECRET} from '@env';
 const seperatorStyles: viewStyle = {
   height: 1,
   marginLeft: 20,
