@@ -34,8 +34,8 @@ const ListItem = (props: ListProps) => {
       <Text style={{textAlign: "center", lineHeight: 15, position: "absolute", top: "85%", left: 0, right: 0, marginLeft: "auto", marginRight: "auto",}}>{props.name}</Text>
     </View> 
     <View style={{display: "flex", flexDirection: "row"}}>
-        <Image source={require("../iconos/ICONOS-17.png")} style={{width: 70, height: 70}} /> 
-        <Image source={require("../iconos/ICONOS-20.png")} style={{width: 70, height: 70}} /> 
+        <Image source={require("../iconos/ICONOS-18.png")} style={{width: 70, height: 70}} /> 
+        <Image source={require("../iconos/ICONOS-19.png")} style={{width: 70, height: 70}} /> 
     </View> 
 
     </View>

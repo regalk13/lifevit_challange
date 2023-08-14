@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/FontAwesome6';
 
 
 const DeviceInfo = (props) =>{
-
+    let dateActual = new Date();
     return (
         <View style={styles.container}>
             <View style={styles.container}>
@@ -21,7 +21,7 @@ const DeviceInfo = (props) =>{
             </View>
             <View style={styles.container}>
                 <Image source={require('../iconos/ICONOS-38.png')} style={{width: 70, height: 70}} /> 
-                <Text>17/11/2015</Text>
+                <Text>{dateActual.getDate() + "/" + (dateActual.getMonth()+1) + "/" +  dateActual.getFullYear()}</Text>
             </View>
             <View style={styles.container}>
                 <Image source={require('../iconos/ICONOS-39.png')} style={{width: 70, height: 70}} /> 
