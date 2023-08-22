@@ -189,6 +189,10 @@ Por ultimo podemos revisar en https://idco.com.co/sensors2/view.php, la informac
 
 Estas vistas se basan en diferentes componentes para generar los estilos necesitados, tambien añade datos del mismo .json abriendo el archivo y generando un objeto con los mismos datos.
 
+## Ganadores
+
+![image](https://github.com/regalk13/reactNative_challenge/assets/72028266/f0b527b7-aa36-46ae-8a49-01e5f280a15c)
+
 ## TO DO:
 
 - Logeo a la aplicación (relacion paciente-operario, paciente-dispositivo)
